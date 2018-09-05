@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="activeUsersInnerCell" id="gTV-IL-0wX" customClass="ActiveUsersInnerCell" customModule="Messenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="124" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="124" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qVw-TS-2eS">
+                        <rect key="frame" x="5" y="0.0" width="114" height="128"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWA-Df-dqA">
+                                <rect key="frame" x="0.0" y="0.0" width="114" height="113"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryh-3M-VLe">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ryh-3M-VLe" secondAttribute="height" multiplier="1:1" id="gQY-Vx-eH5"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ryh-3M-VLe" secondAttribute="bottom" id="OlH-nt-Y16"/>
+                                    <constraint firstItem="ryh-3M-VLe" firstAttribute="leading" secondItem="SWA-Df-dqA" secondAttribute="leading" id="Vav-NR-sjI"/>
+                                    <constraint firstItem="ryh-3M-VLe" firstAttribute="top" secondItem="SWA-Df-dqA" secondAttribute="top" id="mbC-9c-svC"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-YC-r6u">
+                                <rect key="frame" x="0.0" y="118" width="114" height="10"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huE-9Y-axH">
+                                        <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                        <color key="backgroundColor" red="0.41806897259999998" green="0.89436933289999998" blue="0.51288086889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="Boc-JF-VQr"/>
+                                            <constraint firstAttribute="height" constant="10" id="oBk-66-yEF"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-Y9-cVf">
+                                        <rect key="frame" x="15" y="0.0" width="99" height="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qVw-TS-2eS" secondAttribute="trailing" constant="5" id="XOG-el-l8f"/>
+                <constraint firstItem="qVw-TS-2eS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="g0f-Zp-gf8"/>
+                <constraint firstItem="qVw-TS-2eS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kEN-9Z-stl"/>
+                <constraint firstAttribute="bottom" secondItem="qVw-TS-2eS" secondAttribute="bottom" id="xUT-IX-OOA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="124" height="128"/>
+            <connections>
+                <outlet property="activeView" destination="huE-9Y-axH" id="fQi-F0-Xue"/>
+                <outlet property="profileImage" destination="ryh-3M-VLe" id="XQH-g6-H0s"/>
+                <outlet property="userName" destination="v4b-Y9-cVf" id="oGp-ou-d3Y"/>
+            </connections>
+            <point key="canvasLocation" x="54" y="60"/>
+        </collectionViewCell>
+    </objects>
+</document>
