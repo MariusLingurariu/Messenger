@@ -32,18 +32,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0ea-7W-JcU">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3la-MS-pwu">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3la-MS-pwu">
                                                         <rect key="frame" x="0.0" y="0.0" width="65" height="130"/>
                                                         <color key="backgroundColor" red="0.48787274739999997" green="0.85633150079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hPo-zL-o8u">
                                                         <rect key="frame" x="65" y="0.0" width="65" height="130"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K1L-P5-13l">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K1L-P5-13l">
                                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                                 <color key="backgroundColor" red="0.99948436019999998" green="0.46552652119999999" blue="0.40321227910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ll-Yn-y9A">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ll-Yn-y9A">
                                                                 <rect key="frame" x="0.0" y="65" width="65" height="65"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>

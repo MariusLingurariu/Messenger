@@ -21,9 +21,21 @@ class ActiveUserCell: UITableViewCell {
         setRadius()
     }
     
+    func configureCell(userModel: MessageModel) {
+        setRadius()
+        profileImage.image = userModel.profileImage
+        userNameLbl.text = userModel.userName
+        if !userModel.isActive {
+            lastOnlineLbl.text = ""
+        } else {
+            lastOnlineLbl.text = "\(userModel.lastActive)m"
+        }
+        
+    }
+    
     // MARK: - Private Properties
     private func setRadius() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
             self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2
             self.profileImage.clipsToBounds = true
             self.profileImage.layer.borderWidth = 3

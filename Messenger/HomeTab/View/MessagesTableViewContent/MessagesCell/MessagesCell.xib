@@ -20,17 +20,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8qe-cU-SxU">
-                        <rect key="frame" x="0.0" y="0.0" width="362" height="73.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="357" height="73.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CfP-q7-5fs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CfP-q7-5fs">
                                 <rect key="frame" x="8" y="8" width="55" height="55"/>
+                                <color key="backgroundColor" red="0.48787274739999997" green="0.85633150079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="BD8-KQ-NM3"/>
                                     <constraint firstAttribute="width" constant="55" id="meT-FP-iB7"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="D2r-4Z-LOM">
-                                <rect key="frame" x="71" y="8" width="241.5" height="65.5"/>
+                                <rect key="frame" x="71" y="8" width="236.5" height="65.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igj-cZ-fWv">
                                         <rect key="frame" x="0.0" y="0.0" width="76.5" height="33"/>
@@ -47,7 +48,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24:24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dh-4k-Nn4">
-                                <rect key="frame" x="320.5" y="8" width="33.5" height="14.5"/>
+                                <rect key="frame" x="315.5" y="8" width="33.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +65,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="8qe-cU-SxU" secondAttribute="bottom" id="2gt-04-Ecn"/>
-                    <constraint firstAttribute="trailing" secondItem="8qe-cU-SxU" secondAttribute="trailing" id="R9S-4v-xs3"/>
+                    <constraint firstAttribute="trailing" secondItem="8qe-cU-SxU" secondAttribute="trailing" constant="5" id="R9S-4v-xs3"/>
                     <constraint firstItem="8qe-cU-SxU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RFR-hb-xM0"/>
                     <constraint firstItem="8qe-cU-SxU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mFO-qk-e1E"/>
                 </constraints>

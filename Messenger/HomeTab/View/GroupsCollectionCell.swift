@@ -22,9 +22,9 @@ class GroupsCollectionCell: UICollectionViewCell {
     
     // MARK: - Public Methods
     func configureCell() {
-        self.groupsCollection.delegate = self
-        self.groupsCollection.dataSource = self
-        self.groupsCollection.register(UINib.init(nibName: "GroupCell", bundle: nil), forCellWithReuseIdentifier: "GroupCell")
+        groupsCollection.delegate = self
+        groupsCollection.dataSource = self
+        groupsCollection.register(UINib.init(nibName: "GroupCell", bundle: nil), forCellWithReuseIdentifier: "GroupCell")
     }
     
     // MARK: - Private Methods
@@ -32,7 +32,7 @@ class GroupsCollectionCell: UICollectionViewCell {
 extension GroupsCollectionCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return Models.shared.groupList.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -41,7 +41,7 @@ extension GroupsCollectionCell: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath) as? GroupCell{
-            cell.configureCell()
+            cell.configureCell(group: Models.shared.groupList[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -49,7 +49,7 @@ extension GroupsCollectionCell: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = groupsCollection.frame.size.width / 2 - groupsCollection.contentInset.left - groupsCollection.contentInset.right - 20
-        return CGSize(width: width, height: 200)
+        return CGSize(width: width, height: 205)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

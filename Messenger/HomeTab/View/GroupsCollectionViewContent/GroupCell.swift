@@ -33,9 +33,19 @@ class GroupCell: UICollectionViewCell {
         setActive(isActive: true)
     }
     
+    func configureCell(group: GroupModel) {
+        memberImage1.image = group.userList[1].profileImage
+        memberImage2.image = group.userList[2].profileImage
+        memberImage3.image = group.userList[3].profileImage
+        groupName.text = group.groupName
+        lastActiveTimeLbl.text = "Last activity: \(group.lastActive)"
+        setActive(isActive: group.isActive)
+        setRadius()
+    }
+    
     // MARK: - Private Methods
     private func setRadius() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
             self.groupMembersIcon.layer.cornerRadius = self.groupMembersIcon.frame.size.width / 2
             self.groupMembersIcon.clipsToBounds = true
             self.groupMembersIcon.layer.borderWidth = 3
@@ -54,5 +64,4 @@ class GroupCell: UICollectionViewCell {
             self.isActiveView.backgroundColor = UIColor.lightGray
         }
     }
-
 }

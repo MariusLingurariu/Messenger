@@ -33,12 +33,12 @@ extension ActiveUsersCollectionCell: UITableViewDelegate, UITableViewDataSource 
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return Models.shared.messagesHistory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = Bundle.main.loadNibNamed("ActiveUserCell", owner: self, options: nil)?.first as? ActiveUserCell {
-            cell.configureCell()
+            cell.configureCell(userModel: Models.shared.messagesHistory[indexPath.row])
             return cell
         }
         return ActiveUserCell()

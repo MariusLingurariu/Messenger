@@ -16,7 +16,6 @@ class MessagesCollectionCell: UICollectionViewCell {
     
     // MARK: - Private Properties
     private var messageList: [MessageModel] = []
-    private var activeUsersList: [MessageModel] = []
     
     // MARK: - Overriden Methods
     
@@ -27,24 +26,8 @@ class MessagesCollectionCell: UICollectionViewCell {
         MessagesTableView.dataSource = self
         MessagesTableView.delegate = self
         
-        messageList = [
-            MessageModel(image: UIImage(), userName: "Petrica", lastSender: "Petrica", isActive: false),
-            MessageModel(image: UIImage(), userName: "Giorgica", lastSender: "Petrica", isActive: false),
-            MessageModel(image: UIImage(), userName: "Laurentiu", lastSender: "Petrica", isActive: false),
-            MessageModel(image: UIImage(), userName: "Smiiith", lastSender: "Petrica", isActive: true),
-            MessageModel(image: UIImage(), userName: "Buleandra Virginel", lastSender: "Petrica", isActive: true),
-            MessageModel(image: UIImage(), userName: "Pohoata", lastSender: "Petrica", isActive: true)
-        ]
-        messageList[0].setLastActivity(dateString: "03/09/2018/02/13")
-        messageList[1].setLastActivity(dateString: "04/09/2018/02/13")
-        messageList[2].setLastActivity(dateString: "25/08/2018/02/13")
-        messageList[3].setLastActivity(dateString: "03/09/2018/02/13")
-        messageList[4].setLastActivity(dateString: "04/09/2018/02/13")
-        messageList[5].setLastActivity(dateString: "25/08/2018/02/13")
+        messageList = Models.shared.messagesHistory
         
-        for activeUser in messageList {
-            activeUsersList.append(activeUser)
-        }
     }
     
     // MARK: - Private Methods

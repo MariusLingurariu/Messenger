@@ -21,18 +21,26 @@ class ActiveUsersInnerCell: UICollectionViewCell {
         setActive(isActive: true)
         userName.text = "Paulica"
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.setRadius()
-        }
+        
+    }
+    
+    func configureCell(activeUser: MessageModel){
+        profileImage?.image = activeUser.profileImage
+        setActive(isActive: true)
+        userName.text = activeUser.userName
+        setRadius()
     }
     
     
     // MARK: - Private Properties
     private func setRadius() {
-        self.profileImage?.layer.cornerRadius = (self.profileImage?.frame.size.width)! / 2
-        self.profileImage?.clipsToBounds = true
-        self.activeView.layer.cornerRadius = self.activeView.frame.size.width / 2
-        self.activeView.clipsToBounds = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
+            self.profileImage?.layer.cornerRadius = (self.profileImage?.frame.size.width)! / 2
+            self.profileImage?.clipsToBounds = true
+            self.activeView.layer.cornerRadius = self.activeView.frame.size.width / 2
+            self.activeView.clipsToBounds = true
+        }
+        
     }
     
     private func setActive(isActive: Bool) {

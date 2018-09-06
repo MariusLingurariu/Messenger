@@ -24,6 +24,7 @@ class HomeTabController: UIViewController {
     // MARK: - Overriden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        Models.shared.populateMessagesHistory()
         
         navigationController?.navigationBar.shadowImage = UIImage()
         
@@ -36,6 +37,7 @@ class HomeTabController: UIViewController {
                                       y: activeUsersBut.frame.maxY,
                                       width: activeUsersBut.frame.width,
                                       height: 2)
+        activeUsersBut.setTitle("ACTIVE(\(Models.shared.activeUsers.count))", for: .normal)
     }
     
     // MARK: - IBActions

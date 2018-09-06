@@ -14,6 +14,9 @@ class TabController: UIViewController {
         super.viewDidLoad()
 
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
     }
+    
+    
 
 }

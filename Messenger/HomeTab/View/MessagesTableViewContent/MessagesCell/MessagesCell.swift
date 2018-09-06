@@ -22,11 +22,7 @@ class MessagesCell: UITableViewCell {
         userNameLbl.text = "fgsdf"
         lastSenderLbl.text = "sfdgdsfg"
         lastMessageTimeLbl.text = "25:62"
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.profileImg?.layer.cornerRadius = (self.profileImg?.frame.size.width)! / 2
-            self.profileImg?.clipsToBounds = true
-        }
+        roundProfileImage()
     }
     
     func configureCell(_ messageMdodel: MessageModel) {
@@ -34,10 +30,16 @@ class MessagesCell: UITableViewCell {
         userNameLbl.text = messageMdodel.userName
         lastSenderLbl.text = messageMdodel.lastSender
         lastMessageTimeLbl.text = messageMdodel.lastMessageTime
-        
+        roundProfileImage()
     }
     
     // MARK: - Private Properties
+    private func roundProfileImage(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
+            self.profileImg?.layer.cornerRadius = (self.profileImg?.frame.size.width)! / 2
+            self.profileImg?.clipsToBounds = true
+        }
+    }
     
     // MARK: - Overriden Methods
     

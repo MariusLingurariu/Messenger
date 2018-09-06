@@ -6,7 +6,6 @@
 //  Copyright © 2018 Marius. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class MessageModel {

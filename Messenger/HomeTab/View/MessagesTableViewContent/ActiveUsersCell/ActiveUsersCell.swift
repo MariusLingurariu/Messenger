@@ -28,12 +28,12 @@ class ActiveUsersCell: UITableViewCell, UICollectionViewDataSource, UICollection
     
     // MARK: - Public Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return Models.shared.activeUsers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "activeUsersInnerCell", for: indexPath) as? ActiveUsersInnerCell {
-            cell.configureCell()
+            cell.configureCell(activeUser: Models.shared.activeUsers[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
